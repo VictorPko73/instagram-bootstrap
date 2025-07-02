@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -24,6 +23,12 @@
 
 
                     <h3><i class="fa-brands fa-instagram"></i> Instagram</h3>
+                    <!------------------- MENU HAMBURGER -------------------------->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 
@@ -33,8 +38,8 @@
                                 Create a new post
                             </button>
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-primary dropdown-toggle m-2" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
+                                <button type="button" class="btn btn-secondary dropdown-toggle m-2"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="bi bi-gear"></i>
                                 </button>
                                 <ul class="dropdown-menu overflow-hidden">
@@ -51,9 +56,9 @@
             </nav>
         </div>
         <!-----------------------BOTONES PARA CAMBIAR LA VISTA ------------------------------->
-        <div class="row justify-content-center ">
-            <div class="col-2">
-                <button id="btn-grid" class="btn btn-primary" onclick="cambiarVista('grid')">
+        <div class="row justify-content-center mb-3 ">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2 text-center">
+                <button id="btn-grid" class="btn btn-outline-primary" onclick="cambiarVista('grid')">
                     <i class="bi bi-grid-3x3-gap-fill"></i>
                 </button>
                 <button id="btn-lista" class="btn btn-outline-primary" onclick="cambiarVista('lista')">
@@ -65,9 +70,9 @@
 
 
         </div>
-        <!-----------------------VISTA GRID --------------------------------------------->
+        <!-----------------------VIEW GRID --------------------------------------------->
         <div id="vista-grid" class="row vista-grid active">
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12 col-sm-12">
 
                 <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
                     class="img-fluid m-2" alt="">
@@ -76,7 +81,7 @@
                 <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
                     class="img-fluid m-2" alt="">
             </div>
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12 col-sm-12">
                 <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
                     class="img-fluid m-2" alt="">
                 <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
@@ -85,7 +90,7 @@
                     class="img-fluid m-2" alt="">
             </div>
 
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12 col-sm-12">
                 <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
                     class="img-fluid m-2" alt="">
                 <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
@@ -94,9 +99,9 @@
                     class="img-fluid m-2" alt="">
             </div>
         </div>
-        <!-----------------------VISTA LISTA --------------------------------------------->
+        <!-----------------------VIEW LIST --------------------------------------------->
         <div id="vista-lista" class="row justify-content-center vista-lista">
-            <div class="col-6">
+            <div class="col-lg-6 col-md-8 col-sm-12">
                 <div class="card mb-3">
                     <div class="card-header d-flex justify-content-between">
                         <h5>Mi publicación</h5>
@@ -142,9 +147,9 @@
                 </div>
                 <div class="modal-body">
                     <p>Caption: </p>
-                    <textarea class="form-control" placeholder="Add the caption of your post here" id="floatingTextarea2"
-                        style="height: 100px"></textarea>
-                    
+                    <textarea class="form-control" placeholder="Add the caption of your post here"
+                        id="floatingTextarea2" style="height: 100px"></textarea>
+
                     <div class="d-flex">
                         <button class="btn btn-ligth"><i class="bi bi-camera-fill"></i></button>
                         <button class="btn btn-ligth"><i class="bi bi-geo-alt-fill"></i></button>
@@ -163,7 +168,7 @@
 
         </script>
     <script>
-        // Función para cambiar entre vistas
+        //cambiar entre vistas
         function cambiarVista(vista) {
             if (vista === 'grid') {
                 // Mostrar vista grid y ocultar vista lista
@@ -171,7 +176,7 @@
                 document.querySelector('.vista-lista').style.display = 'none';
 
                 // Actualizar estilos de botones
-                document.querySelector('[onclick="cambiarVista(\'grid\')"]').classList.add('btn-primary');
+                document.querySelector('[onclick="cambiarVista(\'grid\')"]').classList.add('btn btn-outline-primary');
                 document.querySelector('[onclick="cambiarVista(\'grid\')"]').classList.remove('btn-outline-primary');
 
                 document.querySelector('[onclick="cambiarVista(\'lista\')"]').classList.add('btn-outline-secondary');
@@ -182,17 +187,17 @@
                 document.querySelector('.vista-grid').style.display = 'none';
 
                 // Actualizar estilos de botones
-                document.querySelector('[onclick="cambiarVista(\'lista\')"]').classList.add('btn-primary');
+                document.querySelector('[onclick="cambiarVista(\'lista\')"]').classList.add('btn btn-outline-primary');
                 document.querySelector('[onclick="cambiarVista(\'lista\')"]').classList.remove('btn-outline-secondary');
 
                 document.querySelector('[onclick="cambiarVista(\'grid\')"]').classList.add('btn-outline-primary');
-                document.querySelector('[onclick="cambiarVista(\'grid\')"]').classList.remove('btn-primary');
+                document.querySelector('[onclick="cambiarVista(\'grid\')"]').classList.remove('btn btn-outline-primary');
             }
         }
 
-        // Ejecutar al cargar la página - Mostrar vista lista por defecto
+        // Mostrar lista por defecto
         document.addEventListener('DOMContentLoaded', function () {
-            // Iniciar con vista lista
+            
             cambiarVista('lista');
         });
     </script>
