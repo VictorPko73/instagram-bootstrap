@@ -18,6 +18,7 @@
 <body>
     <div class="container container-fluid">
         <div class="row">
+            <!-------------------------- NAVBAR ---------------------------->
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
 
@@ -27,21 +28,21 @@
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 
                         <form class="d-flex justify-content-end w-100" role="search">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-success m-2" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
                                 Create a new post
                             </button>
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                <button type="button" class="btn btn-primary dropdown-toggle m-2" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     <i class="bi bi-gear"></i>
                                 </button>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu overflow-hidden">
                                     <li><a class="dropdown-item" href="#">Perfil</a></li>
                                     <li><a class="dropdown-item" href="#">Acesibilidad</a></li>
                                     <li><a class="dropdown-item" href="#">Privacidad</a></li>
                                     <hr>
-                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                                 </ul>
                             </div>
                         </form>
@@ -64,6 +65,7 @@
 
 
         </div>
+        <!-----------------------VISTA GRID --------------------------------------------->
         <div id="vista-grid" class="row vista-grid active">
             <div class="col-4">
 
@@ -92,6 +94,7 @@
                     class="img-fluid m-2" alt="">
             </div>
         </div>
+        <!-----------------------VISTA LISTA --------------------------------------------->
         <div id="vista-lista" class="row justify-content-center vista-lista">
             <div class="col-6">
                 <div class="card mb-3">
@@ -134,15 +137,22 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <p>Caption: </p>
+                    <textarea class="form-control" placeholder="Add the caption of your post here" id="floatingTextarea2"
+                        style="height: 100px"></textarea>
+                    
+                    <div class="d-flex">
+                        <button class="btn btn-ligth"><i class="bi bi-camera-fill"></i></button>
+                        <button class="btn btn-ligth"><i class="bi bi-geo-alt-fill"></i></button>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-success">Publish</button>
                 </div>
             </div>
         </div>
