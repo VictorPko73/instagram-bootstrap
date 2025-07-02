@@ -10,44 +10,184 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
     <title>Instagram BootStrap</title>
 </head>
 
 <body>
     <div class="container container-fluid">
-        <div class="row1">
+        <div class="row">
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
-                    
-                    
+
+
                     <h3><i class="fa-brands fa-instagram"></i> Instagram</h3>
+
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+
+                        <form class="d-flex justify-content-end w-100" role="search">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Create a new post
+                            </button>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="bi bi-gear"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Perfil</a></li>
+                                    <li><a class="dropdown-item" href="#">Acesibilidad</a></li>
+                                    <li><a class="dropdown-item" href="#">Privacidad</a></li>
+                                    <hr>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </div>
                         </form>
                     </div>
                 </div>
             </nav>
         </div>
-        <div class="row2"></div>
-        <div class="row3"></div>
+        <!-----------------------BOTONES PARA CAMBIAR LA VISTA ------------------------------->
+        <div class="row justify-content-center ">
+            <div class="col-2">
+                <button id="btn-grid" class="btn btn-primary" onclick="cambiarVista('grid')">
+                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                </button>
+                <button id="btn-lista" class="btn btn-outline-primary" onclick="cambiarVista('lista')">
+                    <i class="bi bi-square-fill"></i>
+                </button>
+
+
+            </div>
+
+
+        </div>
+        <div id="vista-grid" class="row vista-grid active">
+            <div class="col-4">
+
+                <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
+                    class="img-fluid m-2" alt="">
+                <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
+                    class="img-fluid m-2" alt="">
+                <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
+                    class="img-fluid m-2" alt="">
+            </div>
+            <div class="col-4">
+                <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
+                    class="img-fluid m-2" alt="">
+                <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
+                    class="img-fluid m-2" alt="">
+                <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
+                    class="img-fluid m-2" alt="">
+            </div>
+
+            <div class="col-4">
+                <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
+                    class="img-fluid m-2" alt="">
+                <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
+                    class="img-fluid m-2" alt="">
+                <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
+                    class="img-fluid m-2" alt="">
+            </div>
+        </div>
+        <div id="vista-lista" class="row justify-content-center vista-lista">
+            <div class="col-6">
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>Mi publicación</h5>
+                        <p>01/07/2025</p>
+                    </div>
+                    <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
+                        class="card-img-top" alt="">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                </div>
+
+
+                <div class="card mb-3">
+                    <div class="card-header d-flex justify-content-between">
+                        <h5>Otra publicación</h5>
+                        <p>30/06/2025</p>
+                    </div>
+                    <img src="https://cdn.pixabay.com/photo/2023/02/15/10/22/backlinks-7791415_640.png"
+                        class="card-img-top" alt="">
+                    <div class="card-body">
+                        <p class="card-text">Ejemplo de otra publicación en formato lista.</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    </div>
+    <!-------------------------------------------------MODAL----------------------------------------------------------->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+
+        </script>
+    <script>
+        // Función para cambiar entre vistas
+        function cambiarVista(vista) {
+            if (vista === 'grid') {
+                // Mostrar vista grid y ocultar vista lista
+                document.querySelector('.vista-grid').style.display = 'flex';
+                document.querySelector('.vista-lista').style.display = 'none';
+
+                // Actualizar estilos de botones
+                document.querySelector('[onclick="cambiarVista(\'grid\')"]').classList.add('btn-primary');
+                document.querySelector('[onclick="cambiarVista(\'grid\')"]').classList.remove('btn-outline-primary');
+
+                document.querySelector('[onclick="cambiarVista(\'lista\')"]').classList.add('btn-outline-secondary');
+                document.querySelector('[onclick="cambiarVista(\'lista\')"]').classList.remove('btn-primary');
+            } else {
+                // Mostrar vista lista y ocultar vista grid
+                document.querySelector('.vista-lista').style.display = 'flex';
+                document.querySelector('.vista-grid').style.display = 'none';
+
+                // Actualizar estilos de botones
+                document.querySelector('[onclick="cambiarVista(\'lista\')"]').classList.add('btn-primary');
+                document.querySelector('[onclick="cambiarVista(\'lista\')"]').classList.remove('btn-outline-secondary');
+
+                document.querySelector('[onclick="cambiarVista(\'grid\')"]').classList.add('btn-outline-primary');
+                document.querySelector('[onclick="cambiarVista(\'grid\')"]').classList.remove('btn-primary');
+            }
+        }
+
+        // Ejecutar al cargar la página - Mostrar vista lista por defecto
+        document.addEventListener('DOMContentLoaded', function () {
+            // Iniciar con vista lista
+            cambiarVista('lista');
+        });
+    </script>
+
+
 </body>
 
 </html>
